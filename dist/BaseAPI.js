@@ -9,7 +9,7 @@ var BaseAPI = /** @class */ (function () {
             units: units,
             language: language
         };
-        this.BASE_URL = helpers_1.SCHEME + host;
+        this.BASE_URL = helpers_1.SCHEME + host + "/";
     }
     // ***
     // ***
