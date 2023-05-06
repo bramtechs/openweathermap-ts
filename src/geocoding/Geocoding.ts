@@ -7,12 +7,12 @@ import fetch from "node-fetch";
 class Geocoding extends BaseAPI {
 
     constructor({
-        apiKey,
+        host,
         units,
         language
     }) {
         super({
-            apiKey,
+            host,
             units,
             language
         })

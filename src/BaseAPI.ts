@@ -4,23 +4,23 @@ import {
   QueryType,
   InitialSettings,
 } from './types';
-import { SCHEME, API_HOST} from './helpers';
+import { SCHEME } from './helpers';
 
 class BaseAPI {
   protected settings: InitialSettings;
   protected BASE_URL: string;
 
   constructor({
-    apiKey,
+    host,
     units = 'imperial',
     language = 'en'
   }: InitialSettings) {
     this.settings = {
-      apiKey,
+      host,
       units,
       language
     };
-    this.BASE_URL = SCHEME + API_HOST;
+    this.BASE_URL = SCHEME + host;
   }
 
   // ***
@@ -29,8 +29,8 @@ class BaseAPI {
   // ***
   // ***
 
-  public setApiKey(apiKey: string) {
-    this.settings.apiKey = apiKey;
+  public setHost(host: string) {
+    this.settings.host = host;
   }
 
   public setUnits(units: Unit) {
@@ -43,7 +43,7 @@ class BaseAPI {
 
   public clearSettings() {
     this.settings = {
-      apiKey: 'youNeedValidApiKey',
+      host: 'youNeedValidApiHost',
       units: 'imperial',
       language: 'en'
     };
@@ -68,7 +68,7 @@ class BaseAPI {
   protected buildURL(queryType: QueryType, query: string) {
     const { BASE_URL, settings } = this;
 
-    return `${BASE_URL + queryType}?${query}&appid=${settings.apiKey}&units=${
+    return `${BASE_URL + queryType}?${query}&units=${
       settings.units
     }&lang=${settings.language}`;
   }

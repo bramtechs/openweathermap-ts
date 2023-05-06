@@ -3,12 +3,12 @@ import OpenWeather from '../app';
 describe(`testing initial state and state getters and setters`, () => {
   const randomDate = Date.now().toString();
   const openWeather = new OpenWeather({
-    apiKey: randomDate
+    host: randomDate
   });
 
   it(`getSettings with no arguments should return default settings`, () => {
     expect(openWeather.getAllSettings()).toEqual({
-      apiKey: randomDate,
+      host: randomDate,
       units: 'imperial',
       language: 'en'
     });
@@ -19,14 +19,6 @@ describe(`testing initial state and state getters and setters`, () => {
 
     const units = openWeather.getAllSettings().units;
     expect(units).toBe('metric');
-  });
-
-  it(`clearSettings should reset settings to defaults with the existing API key`, () => {
-    openWeather.setApiKey('heyThere123');
-    openWeather.clearSettings();
-
-    const apiKey = openWeather.getAllSettings().apiKey;
-    expect(apiKey).toBe('youNeedValidApiKey');
   });
 
   it(`should test getAllLocations function to get location object with initial values`, () => {

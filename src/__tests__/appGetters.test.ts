@@ -3,7 +3,7 @@ import OpenWeather from '../app';
 // Tests all the negatives
 describe('Tests Get Methods in app.ts', () => {
   const openWeather = new OpenWeather({
-    apiKey: Date.now().toString()
+    host: Date.now().toString()
   });
 
   describe('getByCityName children methods throw errors without an argument or location object', () => {
@@ -18,7 +18,7 @@ describe('Tests Get Methods in app.ts', () => {
     test('getCurrentWeatherByCityName with others than required argument', () => {
       openWeather
         .getCurrentWeatherByCityName({
-          state: 'Texas',
+          state: 'Texas'
         })
         .catch(({ message }) => {
           expect(message).toBe(

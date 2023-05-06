@@ -1,6 +1,4 @@
-
 export const SCHEME = 'https://'
-export const API_HOST = 'api.openweathermap.org/'
 
 export const WEATHER_API_NAME = 'data/'
 export const WEATHER_API_VERSION = `2.5/`

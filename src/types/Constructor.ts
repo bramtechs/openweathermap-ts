@@ -6,7 +6,7 @@ export interface Settings {
 }
 
 export interface InitialSettings extends Settings {
-  apiKey: string
+    host: string,
 }
 
 export interface Location {

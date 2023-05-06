@@ -14,11 +14,11 @@ class OpenWeatherMap extends OpenWeather {
 
 
   constructor({
-    apiKey,
+    host,
     units,
     language
   }: InitialSettings) {
-    super({ apiKey, units, language });
+    super({ host, units, language });
   }
 
   /**

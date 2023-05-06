@@ -11,7 +11,7 @@ import {
   GetByCityId,
   GetByGeoCoordinates
 } from './types';
-import { SCHEME, API_HOST, WEATHER_API_VERSION, WEATHER_API_NAME } from './helpers';
+import { SCHEME, WEATHER_API_VERSION, WEATHER_API_NAME } from './helpers';
 import BaseAPI from './BaseAPI';
 import Geocoding from './geocoding/Geocoding';
 
@@ -21,12 +21,12 @@ class OpenWeather extends BaseAPI {
   protected geocoding: Geocoding;
 
   constructor({
-    apiKey,
+    host,
     units = 'imperial',
     language = 'en' 
   }: InitialSettings) {
     super({
-      apiKey,
+      host,
       units,
       language
     })
@@ -37,7 +37,7 @@ class OpenWeather extends BaseAPI {
       geoCoordinates: {},
       zipcode: {}
     };
-    this.geocoding = new Geocoding({ apiKey, units, language });
+    this.geocoding = new Geocoding({ host, units, language });
   }
 
   // ***
@@ -46,8 +46,8 @@ class OpenWeather extends BaseAPI {
   // ***
   // ***
 
-  public setApiKey(apiKey: string) {
-    this.settings.apiKey = apiKey;
+  public setHost(host: string) {
+    this.settings.host = host;
   }
 
   public setUnits(units: Unit) {
@@ -93,7 +93,7 @@ class OpenWeather extends BaseAPI {
 
   public clearSettings() {
     this.settings = {
-      apiKey: 'youNeedValidApiKey',
+      host: 'youNeedValidApiKey',
       units: 'imperial',
       language: 'en'
     };
