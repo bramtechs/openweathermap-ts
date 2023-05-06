@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var helpers_1 = require("./helpers");
 var BaseAPI = /** @class */ (function () {
     function BaseAPI(_a) {
         var host = _a.host, _b = _a.units, units = _b === void 0 ? 'imperial' : _b, _c = _a.language, language = _c === void 0 ? 'en' : _c;
@@ -9,7 +8,7 @@ var BaseAPI = /** @class */ (function () {
             units: units,
             language: language
         };
-        this.BASE_URL = helpers_1.SCHEME + host + "/";
+        this.BASE_URL = host + "/";
     }
     // ***
     // ***

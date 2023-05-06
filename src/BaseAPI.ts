@@ -4,7 +4,6 @@ import {
   QueryType,
   InitialSettings,
 } from './types';
-import { SCHEME } from './helpers';
 
 class BaseAPI {
   protected settings: InitialSettings;
@@ -20,7 +19,7 @@ class BaseAPI {
       units,
       language
     };
-    this.BASE_URL = SCHEME + host + "/";
+    this.BASE_URL = host + "/";
   }
 
   // ***

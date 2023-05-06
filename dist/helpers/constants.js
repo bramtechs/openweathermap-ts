@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ZIP_GEO = exports.REVERSE_GEO = exports.DIRECT_GEO = exports.GEOCODING_API_VERSION = exports.GEOCODING_API_NAME = exports.FORECAST = exports.CURRENT_WEATHER_ENDPOINT = exports.WEATHER_API_VERSION = exports.WEATHER_API_NAME = exports.SCHEME = void 0;
-exports.SCHEME = 'https://';
+exports.ZIP_GEO = exports.REVERSE_GEO = exports.DIRECT_GEO = exports.GEOCODING_API_VERSION = exports.GEOCODING_API_NAME = exports.FORECAST = exports.CURRENT_WEATHER_ENDPOINT = exports.WEATHER_API_VERSION = exports.WEATHER_API_NAME = void 0;
 exports.WEATHER_API_NAME = 'data/';
 exports.WEATHER_API_VERSION = "2.5/";
 exports.CURRENT_WEATHER_ENDPOINT = 'weather';

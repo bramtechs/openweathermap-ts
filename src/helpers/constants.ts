@@ -1,5 +1,3 @@
-export const SCHEME = 'https://'
-
 export const WEATHER_API_NAME = 'data/'
 export const WEATHER_API_VERSION = `2.5/`
 export const CURRENT_WEATHER_ENDPOINT = 'weather'

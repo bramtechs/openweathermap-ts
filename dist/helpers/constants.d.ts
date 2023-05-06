@@ -1,4 +1,3 @@
-export declare const SCHEME = "https://";
 export declare const WEATHER_API_NAME = "data/";
 export declare const WEATHER_API_VERSION = "2.5/";
 export declare const CURRENT_WEATHER_ENDPOINT = "weather";

@@ -11,7 +11,7 @@ import {
   GetByCityId,
   GetByGeoCoordinates
 } from './types';
-import { SCHEME, WEATHER_API_VERSION, WEATHER_API_NAME } from './helpers';
+import { WEATHER_API_VERSION, WEATHER_API_NAME } from './helpers';
 import BaseAPI from './BaseAPI';
 import Geocoding from './geocoding/Geocoding';
 
