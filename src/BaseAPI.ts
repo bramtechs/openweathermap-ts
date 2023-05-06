@@ -20,7 +20,7 @@ class BaseAPI {
       units,
       language
     };
-    this.BASE_URL = SCHEME + host;
+    this.BASE_URL = SCHEME + host + "/";
   }
 
   // ***
